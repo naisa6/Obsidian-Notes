@@ -1,0 +1,1 @@
+Lightweight Directory Access Protocol , which is an open, vendor-neutral, industry standard application protocol for accessing and maintaining distributed directory information services over the Internet or a Network. The default port that LDAP runs on is port 389 .

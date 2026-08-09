@@ -1,0 +1,1 @@
+The include statement takes all the text/code/markup that exists in the specified file and loads it into the memory, making it available for use.

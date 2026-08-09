@@ -1,0 +1,1 @@
+Use: ping \[host IP]

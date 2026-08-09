@@ -1,0 +1,72 @@
+STAGE 1 (compromising another regular user)
+
+XSS
+
+CSRF
+
+CLICK
+
+DOM
+
+CORS
+
+HTTP REQUEST SMUGGLING
+
+ACCESS CONTROL
+
+AUTH
+
+WEB CACHE
+
+HOST HEADER
+
+OAUTH
+
+JWT
+
+STAGE 2 (become admin / priv escalation)
+
+SQLI
+
+XSS
+
+CSRF
+
+CLICK
+
+DOM
+
+CORS
+
+HTTP REQUEST SMUGGLING
+
+ACCESS CONTROL
+
+AUTH
+
+HOST HEADER
+
+WEB CACHE
+
+OAUTH
+
+JWT
+
+
+STAGE 3 (read secret file as administrator)
+
+SQLI
+
+XXE
+
+SSRF
+
+OS COMMAND
+
+SSTI
+
+DIR TRAV
+
+INSECURE DE
+
+FILE UPLOAD

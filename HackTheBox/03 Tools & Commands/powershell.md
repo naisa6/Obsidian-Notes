@@ -1,0 +1,1 @@
+-c flag instructs the powershell to execute the command

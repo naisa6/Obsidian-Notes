@@ -1,0 +1,5 @@
+The Secure Shell Protocol (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network. Its most notable applications are remote login and command-line execution.
+First of all, the machine that initiates the connection is called the client and the machine that receives the connections is called the server . The client, has to authenticate to the server in order for the connection to succeed. After the connection is initiated, we have a valid SSH session and the client is able to interact with the server via a shell. 
+
+To use local port forwarding with SSH , you can use the ssh command with the -L option, followed by the local port, remote host and port, and the remote SSH server. For example, the following command will forward traffic from the local port 1234 to the remote server remote.example.com 's localhost interface on port 22 :
+ssh -L 1234:localhost:22 user@remote.example.com

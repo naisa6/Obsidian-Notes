@@ -1,0 +1,9 @@
+How does Responder work?
+Responder can do many different kinds of attacks, but for this scenario, it will set up a malicious SMB server. When the target machine attempts to perform the NTLM authentication to that server, Responder sends a challenge back for the server to encrypt with the user's password. When the server responds, Responder will use the challenge and the encrypted response to generate the NetNTLMv2. While we can't reverse the NetNTLMv2, we can try many different common passwords to see if any generate the same challenge-response, and if we find one, we know that is the password. This is often referred to as hash cracking, which we'll do with a program called John The Ripper.
+
+sudo python3 Responder.py -I tun0
+
+The network interface can be checked by running the ifconfig command in the terminal. In the case of Kali Linux or the HTB Pawnbox, Responder is installed by default as a system utility, thus it can be launched just by running the command sudo responder -I {network_interface} .
+
+With the Responder server ready, we tell the server to include a resource from our SMB server by setting the page parameter as follows via the web browser. In this case, because we have the freedom to specify the address for the SMB share, we specify the IP address of our attacking machine. Now the server tries to load the resource from our SMB server, and Responder captures enough of that to get the NetNTLMv2.
+After sending our payload through the web browser we get an error about not being able to load the requested file. But on checking our listening Responder server we can see we have a NetNTLMv for the Administrator user. The NetNTLMv2 includes both the challenge (random text) and the encrypted response.

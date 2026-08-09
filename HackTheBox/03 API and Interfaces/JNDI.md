@@ -1,0 +1,1 @@
+Java Naming and Directory Interface API . By making calls to this API, applications locate resources and other program objects. A resource is a program object that provides connections to systems, such as database servers and messaging systems.

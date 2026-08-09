@@ -1,0 +1,294 @@
+{
+  "main": {
+    "id": "55b290e21fa52ca8",
+    "type": "split",
+    "children": [
+      {
+        "id": "964a971ca58ffb2a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "66cee5993c8646d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Cache.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cache"
+            }
+          },
+          {
+            "id": "4fb524127cc27e8e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/URL Parameters.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "URL Parameters"
+            }
+          },
+          {
+            "id": "11b2bc7941c46492",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "All Images/Obsidian Notes Formatting.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Obsidian Notes Formatting"
+            }
+          },
+          {
+            "id": "af724d80756b6b75",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0a647c1fe27b9b70",
+    "type": "split",
+    "children": [
+      {
+        "id": "8a2480c59389c743",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "105b9d192f6e5388",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "3182cf7d36c8c79a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": " reqListener; req.ope",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d3175f54e46d1e0e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "8a5ed8d72ea97c3b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HackTheBox/01 Academy/SQL Injection Fundamentals/0. Intro.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "0. Intro"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "a831233246e872cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "f18f42238d115b86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5538bb413fbe294e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/XSS/03 How to detect.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 03 How to detect"
+            }
+          },
+          {
+            "id": "eb4035fe35dc007a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/HTTP Host Header Attacks/06 Payloads.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 06 Payloads"
+            }
+          },
+          {
+            "id": "88038f703b777dcb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "44d9661aeb42a73c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "e436d8673c7871b3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "New folder/Note.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Note"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 302.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "105b9d192f6e5388",
+  "lastOpenFiles": [
+    "README.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/SQL Injection/08 SQLMap.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/SQL Injection/06 Payloads.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Check Stock.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Email Change.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Blog Post Comment.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/URL Parameters.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Submit Feedback.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Request Header.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Register.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Password Change or Reset.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Other.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/OAuth.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Log in.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Live Chat.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Last Viewed.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/JWT.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/GraphQL.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/File Upload.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/DOM Invader.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/DevTools.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Cookies.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Content Editing.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Categories.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Account Details Editing.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/API Key.md",
+    "HackTheBox/01 Academy/File Inclusion",
+    "Pasted image 20260709124726.png",
+    "Pasted image 20260709124723.png",
+    "Pasted image 20260709124721.png",
+    "Pasted image 20260709124719.png",
+    "Pasted image 20260709124713.png",
+    "Pasted image 20260709124708.png",
+    "All Images/Pasted image 20260709124704.png",
+    "All Images/Pasted image 20260709113505.png",
+    "All Images/Pasted image 20260709085234.png",
+    "All Images/Pasted image 20260621225709.png",
+    "HackTheBox/01 Academy/Intro to Active Directory",
+    "HackTheBox/01 Academy/SQL Injection Fundamentals",
+    "HackTheBox/01 Academy/Java Deobfuscation",
+    "HackTheBox/01 Academy/Web Fuzzing",
+    "HackTheBox/01 Academy/Intro to Web Apps/Back End",
+    "HackTheBox/01 Academy/Intro to Web Apps",
+    "HackTheBox/01 Academy/Web Requests/HTTP Methods",
+    "HackTheBox/01 Academy/Web Requests",
+    "packet_transfer.png.~tmp",
+    "Untitled.canvas",
+    "New folder/Untitled.canvas"
+  ]
+}
