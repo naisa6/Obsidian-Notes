@@ -1,4 +1,4 @@
-**
+- [ ] **
 
 - Partial URLs in requests - only a hostname or part of a URL path into request parameters. The value submitted is then incorporated server-side into a full URL that is requested.
 - URLs within data formats - transmit data in formats with a specification that allows the inclusion of URLs that might get requested by the data parser for the format. An obvious example of this is the XML data format

