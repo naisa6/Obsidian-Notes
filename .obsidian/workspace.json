@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Check Stock.md",
+                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Email Change.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Check Stock"
+              "title": "Email Change"
+            }
+          },
+          {
+            "id": "61fc6b8693873da8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Request Header.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Request Header"
             }
           },
           {
@@ -27,12 +41,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Check Stock.md",
+                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Other.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Check Stock"
+              "title": "Other"
+            }
+          },
+          {
+            "id": "319fe2ef2907fb66",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.13.7"
             }
           },
           {
@@ -254,34 +280,34 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "fddaab44c8eaf031",
+  "active": "61fc6b8693873da8",
   "lastOpenFiles": [
-    "Web Pen Testing/Burp Suite + Portswigger Academy/SQL Injection/08 SQLMap.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/GraphQL/03 How to detect.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/2_Portswigger Provided Passwords.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Log in.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/1_Portswigger Provided Usernames.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Blog Post Comment.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Password Change or Reset.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Email Change.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Check Stock.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/URL Parameters.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Cache.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Content Editing.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Cookies.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/File Upload.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/GraphQL.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/JWT.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Last Viewed.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Categories.md",
-    "README.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/SQL Injection/06 Payloads.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Submit Feedback.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Request Header.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Register.md",
     "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Other.md",
     "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/OAuth.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Log in.md",
     "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Live Chat.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Last Viewed.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/JWT.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/GraphQL.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/File Upload.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Email Change.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/DOM Invader.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/DevTools.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Cookies.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Content Editing.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Account Details Editing.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Cache.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Request Header.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/URL Parameters.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Blog Post Comment.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Check Stock.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/API Key.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Search Bar.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/SSRF/04 How to exploit.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/SSRF/02 Impact.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/SSRF/01 SSRF.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Submit Feedback.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Categories.md",
     "HackTheBox/01 Academy/File Inclusion",
     "Pasted image 20260709124726.png",
     "Pasted image 20260709124723.png",

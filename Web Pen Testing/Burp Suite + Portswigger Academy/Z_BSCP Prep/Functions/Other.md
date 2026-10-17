@@ -87,6 +87,10 @@ src="https://lab_id.web-security-academy.net/feedback?name=<img src=1 onerror=pr
   Replace the final two lines with puts Base64.encode64(payload)
   
   echo "object" | tr -d "\n\r"
+  
+  Go into Ubuntu and run ruby hello.rb | tr -d "\n\r"
+
+
 
 ## Information Disclosure Vulnerabilities
 - ==Information disclosure in version control history==

