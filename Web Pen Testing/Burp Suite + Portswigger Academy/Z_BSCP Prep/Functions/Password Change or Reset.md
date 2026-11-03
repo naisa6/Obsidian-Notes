@@ -3,6 +3,10 @@
   Change password and send POST /my-account/change-password to Repeater.
   Change username to administrator and remove current-password parameter, allowing password change.
   Log in as administrator and delete carlos
+- ==Refresh Password broken logic==
+  > _**Identify**_ in the `source code` for the `/forgot-password` page the username is a hidden field.
+  > > Exploit the post request by deleting the `temp-forgot-password-token` parameter in both the URL and request body. Change the username parameter to `carlos`.
+
 
 ## Authentication Vulnerabilities
 - ==Password reset poisoning via middleware==

