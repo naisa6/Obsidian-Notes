@@ -27,12 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/Business Logic/06 Payloads.md",
+                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/XSS/06 Payloads.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "06 Payloads"
+            }
+          },
+          {
+            "id": "e798ba150c15d37e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Other.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Other"
             }
           },
           {
@@ -104,7 +118,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -138,7 +152,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "ysoserial",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -284,35 +298,35 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "105b9d192f6e5388",
+  "active": "e798ba150c15d37e",
   "lastOpenFiles": [
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Business Logic/07 BURP Resources.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Cache.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Other.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Search Bar.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Blog Post Comment.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/SQL Injection/08 SQLMap.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/URL Parameters.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Categories.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Check Stock.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Email Change.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Account Details Editing.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/API Key.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Password Change or Reset.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/BSCP Exam Notes.md",
-    "All Images/Obsidian Notes Formatting.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/DOM Invader.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Request Header.md",
-    "Pasted image 20261027125410.png",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Log in.md",
     "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/File Upload.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Email Change.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/DOM Invader.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/DevTools.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/URL Parameters.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Other.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/GraphQL.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/JWT.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Last Viewed.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Live Chat.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Log in.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/OAuth.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Password Change or Reset.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Register.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Request Header.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Search Bar.md",
     "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Submit Feedback.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/SQL Injection/06 Payloads.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/SQL Injection/08 SQLMap.md",
     "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Open Redirection.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Content Editing.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/SSRF/06 Payloads.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/SSRF/05 How to prevent.md",
-    "Web Pen Testing/Burp Suite + Portswigger Academy/SSRF/04_3 How to exploit  - Blind.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Cache.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/Blog Post Comment.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Other Tools.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/XSS/06 Payloads.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Insecure Deserialisation/04 How to exploit.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/Z_BSCP Prep/Functions/API Key.md",
+    "Web Pen Testing/Burp Suite + Portswigger Academy/OAuth/01 OAuth.md",
+    "Pasted image 20261027125410.png",
     "HackTheBox/01 Academy/File Inclusion",
     "Pasted image 20260709124726.png",
     "Pasted image 20260709124723.png",

